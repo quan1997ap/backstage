@@ -1,0 +1,33 @@
+1. Tổng quan về backstage
+https://tel4vn.edu.vn/blog/platform-engineering-la-gi/
+
+Backstage là một nền tảng mở của Spotify và hỗ trợ bởi CNCF, dùng để phát triển và xây dựng
+Developer Portal, bao gồm các thành phần sau:
+
+https://backstage.io/docs/features/software-catalog/ quản lý microservices, libraries, data pipelines, websites, và các ML models.
+Backstage Software Templates : hỗ trợ khởi tạo các project 1 cách nhanh chóng và tiện lợi.
+Backstage TechDocs : tự động tạo document cho project.
+
+Kiến trúc của Backstage bao gồm 3 phần chính:
+- Core Backstage UI
+- UI plugins và backing services
+- Databases
+
+2. Backstage Software Templates 
+https://www.giaosucan.com/2023/11/su-tich-ve-platform-enginneering-part-1.html
+
+Thay vì DevOps phải trực tiếp build code, deploy theo cách truyền thống, họ sẽ tự phát triển một platform riêng, 
+có GUI friendly, đảm bảo người dùng non-tech vẫn hiểu, user chỉ việc nhập thông tin trên GUI, 
+rồi click chuột là platform sẽ tự build, code deploy, provision infra. Platform này được gọi là Internal Developer Portal (IDP)
+
+Behind the scence của IDP vẫn là những công cụ DevOps truyền thống như CICD (Jenkins, Gitlab), Source (Github), IaC (terraform), nhưng IDP sẽ là một asbtract layer phía trên, cho phép người dùng tương tác với phần core DevOps phía dưới mà ko cần care Jenkins, IaC là cái gì. 
+Miễn là output OK là xong
+
+
+2.1 Create backstage app
+https://backstage.io/docs/getting-started/
+
+2.2 Software-catalog
+https://backstage.io/docs/features/software-catalog/
+Tạo mới từ file yaml : 
+https://github.com/backstage/backstage/tree/master/packages/catalog-model/examples
